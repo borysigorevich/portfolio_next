@@ -103,13 +103,13 @@ export const Contact = () => {
                     </Box>
                 </Box>
                 <Box sx={styles.InfoMap}>
-                    Boris Kutsenko
+                    Roman Lashuk
                     <br/>
                     Ukraine,
                     <br/>
-                    Snovsk, Svobody st. 57-B
+                    Snovsk
                     <br/>
-                    <span>borysigorevich6@gmail.com</span>
+                    <span>roman@gmail.com</span>
                 </Box>
                 <Map/>
             </Box>
