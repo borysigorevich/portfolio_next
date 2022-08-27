@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0 30px #115173 inset !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+
+$primary-color: #ffd700;
+
+@import "~loaders.css/src/animations/pacman.scss";
+
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/helvetica-neu.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'La Belle Aurore';
+  src: url('/fonts/LaBelleAurore.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/fonts/CoolveticaRg-Regular.woff2') format('woff2');
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: 300 11px/1.4 'Helvetica Neue', sans-serif;
+  color: #444;
+  background: #022c43;
+  min-height: 100vh;
+  //overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.loader-active {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50vh;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  color: #ffd700;
+
+  animation: fadeOut 1s forwards;
+  animation-delay: 1s;
+}
