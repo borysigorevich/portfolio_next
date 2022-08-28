@@ -94,10 +94,12 @@ export const Description: SxProps = {
 
 export const Cube: SxProps = {
     height: '200px',
+    transformStyle: 'preserve-3d',
 }
 
 export const CubeSpinner: SxProps = {
     ml: 'calc(50% - 100px)',
+    willChange: 'transform',
     transformStyle: 'preserve-3d',
     transformOrigin: '100px 100px 0',
     '@keyframes cubeSpinner': cubeSpinner,
@@ -116,7 +118,10 @@ export const CubeSpinner: SxProps = {
         placeContent: 'center',
         fontSize: '100px',
         boxShadow: '0 0 20px 0 lightyellow',
+        // webkitTransformStyle: 'preserve-3d',
+        // '-webkit-transform-style': 'preserve-3d',
         transformStyle: 'preserve-3d',
+        willChange: 'transform',
     },
 
     '.face1': {
