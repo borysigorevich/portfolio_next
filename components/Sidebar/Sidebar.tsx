@@ -43,15 +43,15 @@ export const Sidebar = () => {
                         />
                     </Box>
 
-                    <Box sx={styles.Word}>
-                        <Image
-                            src={'/images/logo_sub.png'}
-                            width={50}
-                            height={media1024 ? 24 : 15}
-                            objectFit={'contain'}
-                            alt={'sub logo'}
-                        />
-                    </Box>
+                    {/*<Box sx={styles.Word}>*/}
+                    {/*    <Image*/}
+                    {/*        src={'/images/logo_sub.png'}*/}
+                    {/*        width={50}*/}
+                    {/*        height={media1024 ? 24 : 15}*/}
+                    {/*        objectFit={'contain'}*/}
+                    {/*        alt={'sub logo'}*/}
+                    {/*    />*/}
+                    {/*</Box>*/}
                 </Box>
             </Link>
 

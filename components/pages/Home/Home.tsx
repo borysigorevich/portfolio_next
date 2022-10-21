@@ -13,8 +13,30 @@ import Loader from "react-loaders";
 export const Home = () => {
     const router = useRouter()
     const letterClass = useLetterClass()
-    const nameArray = ['l', 'o', 'b', 'o', 'd', 'a', 'n', ',']
+    const nameArray = ['B', 'o', 'r', 'i', 's', ',']
     const jobArray = ['w', 'e', 'b', ' ', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.']
+
+    // console.log('before promise')
+    // const promise = new Promise((res, rej) => {
+    //     console.log('Promise start')
+    //     setTimeout(() => {
+    //         console.log('after 2 sec')
+    //     }, 2000)
+    // })
+    // console.log('after promise')
+
+    const flatten = (arr: (number | number[])[]) => {
+        const result: number[] = []
+
+        arr.forEach(value => {
+            if(Array.isArray(value)) {
+                result.push(...flatten(value))
+            } else {
+                result.push(value)
+            }
+        })
+        return result
+    }
 
     const handleNavigate = () => router.push('/contact')
 
@@ -30,14 +52,14 @@ export const Home = () => {
                     <Box sx={styles.TextAnimate(13)} component={'span'} className={letterClass}>’</Box>
                     <Box sx={styles.TextAnimate(14)} component={'span'} className={letterClass}>m</Box>
                     &nbsp;
-                    <Box sx={styles.ImgBox}>
-                        <Image
-                            className={'letter-img'}
-                            src={'/images/logo-s.png'}
-                            width={32}
-                            height={52}
-                        />
-                    </Box>
+                    {/*<Box sx={styles.ImgBox}>*/}
+                    {/*    <Image*/}
+                    {/*        className={'letter-img'}*/}
+                    {/*        src={'/images/logo-s.png'}*/}
+                    {/*        width={32}*/}
+                    {/*        height={52}*/}
+                    {/*    />*/}
+                    {/*</Box>*/}
                     <AnimatedLetters
                         letterClass={letterClass}
                         index={15}

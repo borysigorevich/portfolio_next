@@ -14,9 +14,11 @@
     "@emotion/styled": "^11.10.0",
     "@hookform/resolvers": "^2.9.7",
     "@mui/material": "^5.9.3",
+    "@types/three": "^0.144.0",
     "animate.css": "^4.1.1",
     "gsap": "^3.10.4",
     "gsap-trial": "^3.10.4",
+    "lil-gui": "^0.17.0",
     "loaders.css": "^0.1.2",
     "next": "12.2.4",
     "react": "18.2.0",
@@ -26,6 +28,7 @@
     "react-leaflet": "^4.0.1",
     "react-loaders": "^3.0.1",
     "sass": "^1.54.3",
+    "three": "^0.144.0",
     "yup": "^0.32.11"
   },
   "devDependencies": {
