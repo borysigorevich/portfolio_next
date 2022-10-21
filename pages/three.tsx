@@ -34,22 +34,22 @@ const Three = () => {
 
 
         const requestFullScreen = () => {
-            const fullScreen = document.fullscreenElement || document.webkitFullscreenElement
-
-            if (!fullScreen) {
-                if (canvasRef.current?.requestFullscreen) {
-
-                    canvasRef.current?.requestFullscreen()
-                } else if (canvasRef.current?.webkitRequestFullscreen!) {
-                    canvasRef.current?.webkitRequestFullscreen()
-                }
-            } else {
-                if (document.exitFullscreen) {
-                    document.exitFullscreen()
-                } else if (document.webkitExitFullscreen!) {
-                    document.webkitExitFullscreen()
-                }
-            }
+            // const fullScreen = document.fullscreenElement || document.webkitFullscreenElement
+            //
+            // if (!fullScreen) {
+            //     if (canvasRef.current?.requestFullscreen) {
+            //
+            //         canvasRef.current?.requestFullscreen()
+            //     } else if (canvasRef.current?.webkitRequestFullscreen!) {
+            //         canvasRef.current?.webkitRequestFullscreen()
+            //     }
+            // } else {
+            //     if (document.exitFullscreen) {
+            //         document.exitFullscreen()
+            //     } else if (document.webkitExitFullscreen!) {
+            //         document.webkitExitFullscreen()
+            //     }
+            // }
         }
 
         window.addEventListener('mousemove', getMousePosition)
