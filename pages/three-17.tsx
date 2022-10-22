@@ -202,8 +202,9 @@ const Three17 = () => {
             grave.rotation.y = (Math.random() - 0.5) * 0.4
             grave.rotation.z = (Math.random() - 0.5) * 0.4
 
-            graves.add(grave)
             grave.castShadow = true
+
+            graves.add(grave)
         }
 
         //GEOMETRIES
@@ -219,7 +220,6 @@ const Three17 = () => {
 
         const plane = new THREE.Mesh(planeGeometry, planeMaterial)
 
-        plane.receiveShadow = true
 
         plane.geometry.setAttribute(
             'uv2',
@@ -249,15 +249,31 @@ const Three17 = () => {
         directionalLight.castShadow = true
         doorLight.castShadow = true
 
+        doorLight.shadow.mapSize.width = 256
+        doorLight.shadow.mapSize.height = 256
+        doorLight.shadow.camera.far = 7
+
         //GHOSTS
 
-        const ghost1 = new THREE.PointLight('#f0f', 2, 3)
+        const ghost1 = new THREE.PointLight('#e0731c', 2, 3)
         const ghost2 = new THREE.PointLight('#ff0', 2, 3)
         const ghost3 = new THREE.PointLight('#0ff', 2, 3)
 
         ghost1.castShadow = true
         ghost2.castShadow = true
         ghost3.castShadow = true
+
+        ghost1.shadow.camera.far = 6
+        ghost1.shadow.mapSize.width = 256
+        ghost1.shadow.mapSize.height = 256
+
+        ghost2.shadow.camera.far = 6
+        ghost2.shadow.mapSize.width = 256
+        ghost2.shadow.mapSize.height = 256
+
+        ghost3.shadow.camera.far = 6
+        ghost3.shadow.mapSize.width = 256
+        ghost3.shadow.mapSize.height = 256
 
         scene.add(ghost1, ghost2, ghost3)
 
@@ -267,15 +283,19 @@ const Three17 = () => {
         scene.add(house, graves)
         scene.fog = fog
 
+        plane.receiveShadow = true
+
 
         //RENDERER
         const renderer = new THREE.WebGLRenderer({
             canvas: canvasRef.current!
         })
         renderer.setSize(width, height)
-        renderer.render(scene, camera)
         renderer.setClearColor('#262837')
         renderer.shadowMap.enabled = true
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap
+
+        renderer.render(scene, camera)
 
         const getNewSize = () => {
             width = innerWidth
