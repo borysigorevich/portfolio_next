@@ -287,7 +287,8 @@ const Three17 = () => {
 
         //RENDERER
         const renderer = new THREE.WebGLRenderer({
-            canvas: canvasRef.current!
+            canvas: canvasRef.current!,
+            antialias: true
         })
         renderer.setSize(width, height)
         renderer.setClearColor('#262837')
