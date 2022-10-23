@@ -285,7 +285,6 @@ const Three17 = () => {
 
         plane.receiveShadow = true
 
-
         //RENDERER
         const renderer = new THREE.WebGLRenderer({
             canvas: canvasRef.current!
