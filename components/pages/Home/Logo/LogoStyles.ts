@@ -22,7 +22,8 @@ export const Logo: SxProps = {
     position: 'absolute',
     right: {
         xs: '50%',
-        md: '20%',
+        md: '-15%',
+        lg: '10%'
     },
     top: {
         xs: '30px',
@@ -32,16 +33,17 @@ export const Logo: SxProps = {
         xs: 'translateX(50%)',
         md: 'translateY(-50%)'
     },
-    width: {
-        xs: '263px',
-        lg: '400px'
-    },
+    // width: {
+    //     xs: '263px',
+    //     lg: '700px'
+    // },
+    width: '700px',
     height: {
         xs: '422px',
         lg: '641px'
     },
 
-    zIndex: '-1',
+    zIndex: 0,
 
     '@keyframes logoFadeIn': fadeIn,
 

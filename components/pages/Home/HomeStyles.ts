@@ -4,7 +4,9 @@ export const Home: SxProps = {
     opacity: '0',
     animation: 'fadeIn 1s 1s forwards',
     willChange: 'contents',
-    position: 'relative'
+    position: 'relative',
+    zIndex: 2,
+    width: 'fit-content'
 }
 
 export const Title: SxProps = {

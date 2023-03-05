@@ -11,8 +11,6 @@ import React from "react";
 
 function MyApp({Component, pageProps}: AppProps) {
 
-    console.log(pageProps)
-
     if(pageProps.three) return <Component {...pageProps}/>
 
     return <>

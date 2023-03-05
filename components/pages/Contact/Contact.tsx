@@ -39,7 +39,7 @@ export const Contact = () => {
     const onSubmit: SubmitHandler<FormValues> = async (data) => {
 
         await emailjs.sendForm(
-            'service_df6b0xw',
+            'service_0mzfv8f',
             'template_b4bufkq',
             formRef.current!, 'bOeW6PtP2XGzCGztJ')
             .then(result => console.log(result.text))

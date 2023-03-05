@@ -1,11 +1,11 @@
-import React, {useEffect, useRef} from 'react';
-import {GetServerSideProps, InferGetServerSidePropsType} from 'next'
+import React, { useEffect, useRef } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import * as THREE from 'three'
 import GUI from 'lil-gui'
 
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'
-import {FontLoader} from 'three/examples/jsm/loaders/FontLoader'
-import {TextGeometry} from 'three/examples/jsm/geometries/TextGeometry'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 import typefaceFont from 'three/examples/fonts/helvetiker_regular.typeface.json'
 
 export const getServerSideProps: GetServerSideProps = async () => {
@@ -15,7 +15,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
         }
     }
 }
-
 const Three13 = (props: InferGetServerSidePropsType<typeof getServerSideProps>) => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null)
     console.log(props.three)
@@ -44,7 +43,7 @@ const Three13 = (props: InferGetServerSidePropsType<typeof getServerSideProps>) 
                         bevelSize: 0.02,
                         bevelOffset: 0,
                         bevelSegments: 4,
-                    }
+                    },
                 )
 
                 // textGeometry.computeBoundingBox()
@@ -72,7 +71,7 @@ const Three13 = (props: InferGetServerSidePropsType<typeof getServerSideProps>) 
         const geometry = new THREE.BoxGeometry(1, 1, 1)
         // const material = new THREE.MeshStandardMaterial()
         const material = new THREE.MeshMatcapMaterial({
-            matcap
+            matcap,
         })
         const donutGeometry = new THREE.TorusGeometry(0.3, 0.2, 20, 45)
 
@@ -116,7 +115,7 @@ const Three13 = (props: InferGetServerSidePropsType<typeof getServerSideProps>) 
 
 
         const renderer = new THREE.WebGLRenderer({
-            canvas: canvasRef.current!
+            canvas: canvasRef.current!,
         })
 
         renderer.setSize(width, height)

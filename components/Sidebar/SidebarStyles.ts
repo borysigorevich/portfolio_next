@@ -40,7 +40,8 @@ export const Logo: SxProps = {
         lg: 'auto'
     },
     gap: '5px',
-    textAlign: 'center'
+    textAlign: 'center',
+    cursor: 'pointer'
 }
 
 export const Letter: SxProps = {

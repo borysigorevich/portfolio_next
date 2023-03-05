@@ -181,7 +181,9 @@ const Test = () => {
             // } else {
             //     return tempObj[keys[i]]
             // }
+            // @ts-ignore
             if (tempObj[keys[i]]) {
+                // @ts-ignore
                 tempObj = tempObj[keys[i]]
             } else {
                 return undefined

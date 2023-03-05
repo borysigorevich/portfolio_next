@@ -1,19 +1,19 @@
-import React, {useEffect, useState} from 'react';
-import {useRouter} from 'next/router'
+import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 
 import useMediaQuery from '@mui/material/useMediaQuery'
 
-import {Link, Image, Box} from '@common'
+import { Link, Image, Box } from '@common'
 
-import {RiHome2Line} from 'react-icons/ri';
-import {BsEnvelope} from 'react-icons/bs';
-import {AiOutlineUser} from 'react-icons/ai';
+import { RiHome2Line } from 'react-icons/ri'
+import { BsEnvelope } from 'react-icons/bs'
+import { AiOutlineUser } from 'react-icons/ai'
 
-import {FaLinkedin} from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa'
 
 
 import * as styles from './SidebarStyles'
-import {MobileMenu} from './MobileMenu'
+import { MobileMenu } from './MobileMenu'
 
 export const Sidebar = () => {
     const router = useRouter()
@@ -35,7 +35,7 @@ export const Sidebar = () => {
                 <Box component={'a'} sx={styles.Logo}>
                     <Box sx={styles.Letter}>
                         <Image
-                            src={'/images/logo-s.png'}
+                            src={'/images/nav.svg'}
                             width={24}
                             height={media1024 ? 40 : 23}
                             objectFit={'contain'}
@@ -59,7 +59,7 @@ export const Sidebar = () => {
                 <Link href={'/'} >
                     <a onClick={handleClose}>
                         <Box className={'icon-box home'} sx={styles.ActiveLink(activeLink === '/')}>
-                            <RiHome2Line size={22} className={'icon'}/>
+                            <RiHome2Line size={22} className={'icon'} />
                         </Box>
                     </a>
                 </Link>
@@ -67,7 +67,7 @@ export const Sidebar = () => {
                 <Link href={'/about'} >
                     <a onClick={handleClose}>
                         <Box className={'icon-box about'} sx={styles.ActiveLink(activeLink === 'about')}>
-                            <AiOutlineUser size={22} className={'icon'}/>
+                            <AiOutlineUser size={22} className={'icon'} />
                         </Box>
                     </a>
                 </Link>
@@ -75,27 +75,42 @@ export const Sidebar = () => {
                 <Link href={'/contact'} >
                     <a onClick={handleClose}>
                         <Box className={'icon-box contact'} sx={styles.ActiveLink(activeLink === 'contact')}>
-                            <BsEnvelope size={22} className={'icon'}/>
+                            <BsEnvelope size={22} className={'icon'} />
                         </Box>
                     </a>
                 </Link>
             </Box>
 
-            <MobileMenu open={open} setOpen={setOpen}/>
+            <MobileMenu open={open} setOpen={setOpen} />
 
             <Box sx={styles.SocialLinks}>
-                <a href="https://www.linkedin.com/" rel={'noreferrer'} target={'_blank'} referrerPolicy={'no-referrer'}>
-                    <FaLinkedin size={16}/>
+                <a
+                    href='https://www.linkedin.com/'
+                    rel={'noreferrer'}
+                    target={'_blank'}
+                    referrerPolicy={'no-referrer'}
+                >
+                    <FaLinkedin size={16} />
                 </a>
 
-                <a href="https://www.linkedin.com/" rel={'noreferrer'} target={'_blank'} referrerPolicy={'no-referrer'}>
-                    <FaLinkedin size={16}/>
+                <a
+                    href='https://www.linkedin.com/'
+                    rel='noreferrer'
+                    target='_blank'
+                    referrerPolicy='no-referrer'
+                >
+                    <FaLinkedin size={16} />
                 </a>
 
-                <a href="https://www.linkedin.com/" rel={'noreferrer'} target={'_blank'} referrerPolicy={'no-referrer'}>
-                    <FaLinkedin size={16}/>
+                <a
+                    href='https://www.linkedin.com/'
+                    rel='noreferrer'
+                    target='_blank'
+                    referrerPolicy='no-referrer'
+                >
+                    <FaLinkedin size={16} />
                 </a>
             </Box>
         </Box>
-    );
-};
+    )
+}
