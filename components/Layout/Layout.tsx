@@ -92,6 +92,7 @@ export const Layout = ({children}: LayoutProps) => {
 
 
     return (
+        /*@ts-ignore*/
         <Box sx={styles.Layout}>
             <Sidebar/>
             <Box sx={styles.Main}>
