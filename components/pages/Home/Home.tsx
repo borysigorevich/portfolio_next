@@ -2,14 +2,13 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import dynamic from 'next/dynamic'
 
-import { Box, Typography, Button } from '@common'
+import { Box, Button, Typography } from '@common'
 import { AnimatedLetters } from '@components/AnimatedLetters'
 import { useLetterClass } from '@hooks'
-
-const Logo = dynamic(() => import('./Logo/Logo'), { ssr: false })
-
 import * as styles from './HomeStyles'
 import Loader from 'react-loaders'
+
+const Logo = dynamic(() => import('./Logo/Logo'), { ssr: false })
 
 
 export const Home = () => {
@@ -41,19 +40,19 @@ export const Home = () => {
     // })
     // console.log('after promise')
 
-    const flatten = (arr: (number | number[])[]) => {
-        const result: number[] = []
-
-        arr.forEach(value => {
-            if (Array.isArray(value)) {
-                result.push(...flatten(value))
-            } else {
-                result.push(value)
-            }
-        })
-        return result
-    }
-
+    // const flatten = (arr: (number | number[])[]) => {
+    //     const result: number[] = []
+    //
+    //     arr.forEach(value => {
+    //         if (Array.isArray(value)) {
+    //             result.push(...flatten(value))
+    //         } else {
+    //             result.push(value)
+    //         }
+    //     })
+    //     return result
+    // }
+    //
     const handleNavigate = () => router.push('/contact')
 
 
@@ -111,7 +110,8 @@ export const Home = () => {
                     <AnimatedLetters letterClass={letterClass} index={23} strArray={jobArray} />
                 </Typography>
                 <Typography variant={'h2'} sx={styles.SubTitle}>
-                    Front End Developer
+                    Greetings and welcome to my personal file portfolio! This is a space where I showcase my skills and
+                    expertise as a React Developer.
                 </Typography>
 
                 <Button
