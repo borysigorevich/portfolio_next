@@ -1,18 +1,16 @@
-import React from 'react';
+import React from 'react'
 
 import Loader from 'react-loaders'
 
-import {Box, Typography} from '@common'
-import {AnimatedLetters} from "@components/AnimatedLetters";
+import { Box, Typography } from '@common'
+import { AnimatedLetters } from '@components/AnimatedLetters'
 
-import {useLetterClass} from '@hooks'
+import { useLetterClass } from '@hooks'
 
-import {GrReactjs} from 'react-icons/gr';
-import {TbBrandNextjs} from 'react-icons/tb';
-import {TbBrandCss3} from 'react-icons/tb';
-import {AiOutlineHtml5} from 'react-icons/ai';
-import {TbBrandJavascript} from 'react-icons/tb';
-import {SiMaterialui} from 'react-icons/si';
+import { GrReactjs } from 'react-icons/gr'
+import { TbBrandCss3, TbBrandJavascript, TbBrandNextjs } from 'react-icons/tb'
+import { AiOutlineHtml5 } from 'react-icons/ai'
+import { SiMaterialui } from 'react-icons/si'
 
 
 import * as styles from './AboutStyles'
@@ -32,29 +30,29 @@ export const About = () => {
                         />
                     </Typography>
                     <Typography variant={'body1'} sx={styles.Description}>
-                        I&quot;m a beginner front-end developer. I like it.
+                        Hello there! I'm a skilled Frontend Developer with 2 years of experience.
                     </Typography>
                 </Box>
 
                 <Box sx={styles.Cube}>
                     <Box sx={styles.CubeSpinner}>
                         <Box className={'face1'}>
-                            <GrReactjs color={'#5ed4f4'}/>
+                            <GrReactjs color={'#5ed4f4'} />
                         </Box>
                         <Box className={'face2'}>
-                            <TbBrandNextjs color={'#000'}/>
+                            <TbBrandNextjs color={'#000'} />
                         </Box>
                         <Box className={'face3'}>
-                            <TbBrandCss3 color={'#28a4d9'}/>
+                            <TbBrandCss3 color={'#28a4d9'} />
                         </Box>
                         <Box className={'face4'}>
-                            <AiOutlineHtml5 color={'#f06529'}/>
+                            <AiOutlineHtml5 color={'#f06529'} />
                         </Box>
                         <Box className={'face5'}>
-                            <TbBrandJavascript color={'#efd81d'}/>
+                            <TbBrandJavascript color={'#efd81d'} />
                         </Box>
                         <Box className={'face6'}>
-                            <SiMaterialui color={'rgb(23, 130, 251)'}/>
+                            <SiMaterialui color={'rgb(23, 130, 251)'} />
                         </Box>
                     </Box>
                 </Box>
@@ -64,5 +62,5 @@ export const About = () => {
                 type={'pacman'}
             />
         </>
-    );
-};
+    )
+}
