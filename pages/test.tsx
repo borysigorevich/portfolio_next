@@ -49,11 +49,10 @@ const Test = () => {
         // }
     }, [])
 
-
     const [input, setInput] = useState('')
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => setInput(event.target.value)
-    const handleDebounce = () => console.log('hello world')
+    const handleDebounce = () => console.log(input)
 
     useDebounce(handleDebounce, 500, [input])
 
@@ -220,7 +219,7 @@ const Test = () => {
             // minHeight: '100vh'
         }}>
 
-            {/*<input type="text" onChange={handleChange} value={input}/>*/}
+            <input type="text" onChange={handleChange} value={input}/>
 
             {/*<Box sx={{*/}
             {/*    width: '40px',*/}
