@@ -10,7 +10,9 @@ import { BsEnvelope } from 'react-icons/bs'
 import { AiOutlineUser } from 'react-icons/ai'
 
 import { FaLinkedin } from 'react-icons/fa'
-
+import { BsGithub, BsHandbagFill } from 'react-icons/bs'
+import { BiGame } from 'react-icons/bi'
+import { GrResume } from 'react-icons/gr'
 
 import * as styles from './SidebarStyles'
 import { MobileMenu } from './MobileMenu'
@@ -42,16 +44,6 @@ export const Sidebar = () => {
                             alt={'logo'}
                         />
                     </Box>
-
-                    {/*<Box sx={styles.Word}>*/}
-                    {/*    <Image*/}
-                    {/*        src={'/images/logo_sub.png'}*/}
-                    {/*        width={50}*/}
-                    {/*        height={media1024 ? 24 : 15}*/}
-                    {/*        objectFit={'contain'}*/}
-                    {/*        alt={'sub logo'}*/}
-                    {/*    />*/}
-                    {/*</Box>*/}
                 </Box>
             </Link>
 
@@ -85,7 +77,7 @@ export const Sidebar = () => {
 
             <Box sx={styles.SocialLinks}>
                 <a
-                    href='https://www.linkedin.com/'
+                    href='https://www.linkedin.com/in/boris-kutsenko-974b9b150/'
                     rel={'noreferrer'}
                     target={'_blank'}
                     referrerPolicy={'no-referrer'}
@@ -94,21 +86,30 @@ export const Sidebar = () => {
                 </a>
 
                 <a
-                    href='https://www.linkedin.com/'
+                    href='https://github.com/borysigorevich?tab=repositories'
                     rel='noreferrer'
                     target='_blank'
                     referrerPolicy='no-referrer'
                 >
-                    <FaLinkedin size={16} />
+                    <BsGithub size={16} />
                 </a>
 
                 <a
-                    href='https://www.linkedin.com/'
+                    href='https://react-three-fiber-theta.vercel.app/three53'
                     rel='noreferrer'
                     target='_blank'
                     referrerPolicy='no-referrer'
                 >
-                    <FaLinkedin size={16} />
+                    <BiGame size={16} />
+                </a>
+
+                <a
+                    href='https://cv-sepia-nu.vercel.app/'
+                    rel='noreferrer'
+                    target='_blank'
+                    referrerPolicy='no-referrer'
+                >
+                    <BsHandbagFill size={16} />
                 </a>
             </Box>
         </Box>
