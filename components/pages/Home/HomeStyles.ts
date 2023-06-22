@@ -58,13 +58,14 @@ export const ImgBox: SxProps = {
 }
 
 export const SubTitle: SxProps = {
+    maxWidth: '50%',
     fontWeight: '400',
-    fontSize: '11px',
+    fontSize: '14px',
     color: '#8d8d8d',
     letterSpacing: '3px',
-    fontFamily: 'sans-serif',
-    // animation: 'fadeIn 1s backwards',
-    // animationDelay: '1.8s',
+    // fontFamily: 'sans-serif',
+    animation: 'fadeIn 1s backwards',
+    animationDelay: '1.8s',
     mb: '20px',
 }
 
