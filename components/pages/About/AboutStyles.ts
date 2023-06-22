@@ -86,11 +86,11 @@ export const Title: SxProps = {
 }
 
 export const Description: SxProps = {
-    fontSize: '13px',
+    fontSize: '18px',
     fontWeight: '300',
+    lineHeight: '2',
     color: '#fff'
 }
-
 
 export const Cube: SxProps = {
     height: '200px',
