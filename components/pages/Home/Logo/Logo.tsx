@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react'
 
 import { Group } from 'three'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, PresentationControls, Float, Center, useMatcapTexture, useGLTF } from '@react-three/drei'
+import { PresentationControls, Float, useGLTF } from '@react-three/drei'
 import { useSpring, animated } from '@react-spring/three'
 
 import { Box } from '@common'
@@ -14,16 +14,12 @@ const LetterB = () => {
 
     const { scale } = useSpring({
         scale: isRendered ? 5 : 0,
-        delay: 500,
+        delay: 1000,
         config: {
             duration: 1000,
         },
     })
 
-    // console.log(props)
-    const [matcapTexture] = useMatcapTexture('CAE24E_6C9A23_A3C737_B3D43C', 256)
-    // @ts-ignore
-    // const logo = useGLTF('/react-logo.gltf')
     const logo = useGLTF('/letter.glb')
 
     const logoRef = useRef<Group | null>(null)
@@ -32,45 +28,15 @@ const LetterB = () => {
         setIsRendered(true)
     }, [])
 
-    // if (logo) {
-    // @ts-ignore
-    // logo.scene.children[0].children.forEach(mesh => mesh.material.color = new Color('#61dbfb'))
-    // console.log(logo)
-    // @ts-ignore
-    // logo.materials.default.color = new Color('#61dbfb')
-    // }
-
-    console.log(scale)
-
     return (
-        <PresentationControls
-            config={{ mass: 2, tension: 200 }}
-            snap={{ mass: 4, tension: 200 }}
-            rotation={[-0.3, 0, 0]}
-            polar={[-Math.PI / 3, Math.PI / 3]}
-            azimuth={[-Math.PI / 1.8, Math.PI / 2]}
-        >
+        // <PresentationControls
+        //     config={{ mass: 2, tension: 200 }}
+        //     snap={{ mass: 4, tension: 200 }}
+        //     rotation={[-0.3, 0, 0]}
+        //     polar={[-Math.PI / 3, Math.PI / 3]}
+        //     azimuth={[-Math.PI / 1.8, Math.PI / 2]}
+        // >
             <>
-                {/*<Text3D*/}
-                {/*    rotation={[0, 0, -0.5]}*/}
-                {/*    font='/fonts/helvetiker_regular.typeface.json'*/}
-                {/*    scale={3}*/}
-                {/*    size={1}*/}
-                {/*    height={0.2}*/}
-                {/*    curveSegments={12}*/}
-                {/*    bevelEnabled*/}
-                {/*    bevelThickness={0.02}*/}
-                {/*    bevelSize={0.02}*/}
-                {/*    bevelOffset={0}*/}
-                {/*    bevelSegments={5}*/}
-                {/*>*/}
-                {/*    B*/}
-                {/*    /!*<meshNormalMaterial />*!/*/}
-                {/*    /!*<meshMatcapMaterial matcap={matcapTexture} />*!/*/}
-                {/*    <meshBasicMaterial*/}
-                {/*        color='#ffd700'*/}
-                {/*    />*/}
-                {/*</Text3D>*/}
                 {/*@ts-ignore*/}
                 <Float speed={4}>
                     <animated.group
@@ -83,21 +49,9 @@ const LetterB = () => {
                         />
                     </animated.group>
 
-                    {/*<animated.mesh scale={scale} onClick={() => setActive(state => !state)}>*/}
-                    {/*    <boxGeometry args={[2,2,2]}/>*/}
-                    {/*    <meshNormalMaterial/>*/}
-                    {/*</animated.mesh>*/}
-
                 </Float>
-                {/*<group>*/}
-                {/*    <mesh*/}
-                {/*        geometry={nodes?.Scene}*/}
-                {/*    >*/}
-                {/*        <meshBasicMaterial />*/}
-                {/*    </mesh>*/}
-                {/*</group>*/}
             </>
-        </PresentationControls>
+        // </PresentationControls>
     )
 }
 
