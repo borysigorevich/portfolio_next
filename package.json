@@ -12,6 +12,7 @@
     "@emailjs/browser": "^3.6.2",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
+    "@fontsource/nunito": "^4.5.12",
     "@hookform/resolvers": "^2.9.7",
     "@mui/material": "^5.9.3",
     "@react-spring/three": "^9.7.1",
