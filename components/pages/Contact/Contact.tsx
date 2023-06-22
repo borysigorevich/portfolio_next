@@ -59,7 +59,7 @@ export const Contact = () => {
                         />
                     </Typography>
                     <Typography variant={'body1'} sx={styles.Description}>
-                        I&quot;m a beginner front-end developer. I like it.
+                        Thank you for visiting my portfolio! I would be thrilled to connect with you and discuss potential opportunities or collaborations.
                     </Typography>
                     <Box component={'form'} sx={styles.Form} onSubmit={handleSubmit(onSubmit)}
                          ref={formRef}>

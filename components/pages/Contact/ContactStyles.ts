@@ -64,6 +64,11 @@ export const Description: SxProps = {
     fontSize: '13px',
     fontWeight: '300',
     color: '#fff',
+    maxWidth: {
+        xs: '100%',
+        md: '80%',
+
+    },
     mb: '30px'
 }
 
