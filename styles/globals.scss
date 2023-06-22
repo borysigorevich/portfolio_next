@@ -18,7 +18,6 @@ $primary-color: #ffd700;
 
 @import "~loaders.css/src/animations/pacman.scss";
 
-
 @font-face {
   font-family: 'Helvetica Neue';
   src: url('/fonts/helvetica-neu.ttf') format('ttf');
@@ -39,7 +38,7 @@ html {
 }
 
 body {
-  font: 300 11px/1.4 'Helvetica Neue', sans-serif;
+  font: 300 11px/1.4 'Nunito', sans-serif;
   color: #444;
   background: #022c43;
   min-height: 100vh;
