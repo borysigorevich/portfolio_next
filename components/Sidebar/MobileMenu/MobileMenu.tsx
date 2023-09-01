@@ -14,7 +14,9 @@ export const MobileMenu = ({open, setOpen}: MobileMenuProps) => {
 
     return (
         <>
+        {/*@ts-ignore*/}
             <Box
+                /*@ts-ignore*/
                 className={`menu-toggle ${open ? 'active' : ''}`}
                 sx={styles.MobileMenu}
                 onClick={handleOpen}

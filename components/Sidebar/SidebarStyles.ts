@@ -161,7 +161,7 @@ export const SocialLinks: SxProps = {
         sm: 'grid'
     },
     gridTemplateColumns: {
-        xs: 'repeat(3, auto)',
+        xs: 'repeat(4, auto)',
         lg: '1fr'
     },
     textAlign: 'center',
